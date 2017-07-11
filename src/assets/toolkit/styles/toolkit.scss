@@ -4,7 +4,7 @@
 
 // 1. Configuration and helpers
 @import
-  'vendor/foundation-settings',
+  'vendors/foundation-settings',
   'utils/variables',
   'utils/mixins',
   'utils/color',
@@ -14,7 +14,7 @@
 
 // 2. Vendors
 @import
-  'vendor/normalize',
+  'vendors/normalize',
   '../../vendor/Scut/dist/scut',
   '../../vendor/foundation-sites/scss/foundation';
 
