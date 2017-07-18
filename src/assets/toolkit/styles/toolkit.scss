@@ -50,10 +50,11 @@
 @include foundation-tooltip;
 @include foundation-top-bar;
 
+// Utilities
+@import 'utils/utils';
+
 // Pattners
 @import 'atoms/atoms';
 @import 'molecules/molecules';
 @import 'organisms/organisms';
 
-// Utilities
-@import 'utils/utils';
