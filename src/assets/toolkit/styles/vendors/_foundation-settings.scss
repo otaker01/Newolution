@@ -75,11 +75,13 @@ $foundation-palette: (
   warning: #ffae00,
   alert: #cc4b37,
 );
+
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
 $black: #0a0a0a;
 $white: #fefefe;
+
 $body-background: $white;
 $body-font-color: $black;
 $body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
@@ -99,6 +101,20 @@ $global-color-pick-contrast-tolerance: 0;
 $print-transparent-backgrounds: true;
 
 @include add-foundation-colors;
+
+$colors: (
+  primary: $primary-color,
+  secondary: $secondary-color,
+  success: $success-color,
+  warning: $warning-color,
+  alert: $alert-color,
+
+  light-gray: $light-gray,
+  medium-gray: $medium-gray,
+  dark-gray: $dark-gray,
+  black: $black,
+  white: $white
+);
 
 // 2. Breakpoints
 // --------------
