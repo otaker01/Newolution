@@ -1,0 +1,708 @@
+<!doctype html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title></title>
+
+	<link rel="stylesheet" href="/assets/fabricator/styles/f.css">
+
+	<!-- toolkit styles -->
+	<link rel="stylesheet" href="/assets/toolkit/styles/toolkit.css">
+	<!-- /toolkit styles -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+
+		<!-- fabricator icons -->
+		<svg style="display: none;">
+			<symbol id="f-icon-code" viewBox="0 0 512 512">
+				<path d="M377.3 121.3l-40.5 40.4 94.4 94.3-94.4 94.3 40.5 40.4L512 256zM134.7 121.3L0 256l134.7 134.7 40.5-40.4L80.8 256l94.4-94.3zM281.8 103.8zM230.183 408.16l-29.233-7.97 80.85-296.484 29.234 7.972z"/>
+			</symbol>
+			<symbol id="f-icon-notes" viewBox="0 0 512 512">
+				<path d="M443.8 0H68.2C30.6 0 0 30.5 0 68v264.2c0 16.6 8.9 29.5 25.9 37.5 15.3 7.2 33.1 8.4 40.1 8.5V512l201.6-134h176.1c37.6 0 68.2-30.3 68.2-67.8V68c.1-37.5-30.5-68-68.1-68zM114 438V330H68.2c-11.1 0-19.2-8.8-19.2-19.8V68c0-11 8.2-20 19.2-20h375.5c11.1 0 19.2 9 19.2 20v242.2c0 11-8.2 19.8-19.2 19.8H244.2L114 438z"/>
+			</symbol>
+			<symbol id="f-icon-labels" viewBox="0 0 512 512">
+				<path d="M304 280c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48zM464 280c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48zM144 280c0 13.2-10.8 24-24 24H72c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48z"/>
+			</symbol>
+			<symbol id="f-icon-menu" viewBox="0 0 512 512">
+				<path d="M512 100c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 212c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 324c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 436c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24z"/>
+			</symbol>
+			<symbol id="f-icon-settings" viewBox="0 0 512 512">
+				<path d="M256 377.3c-67.5 0-121.6-53.9-121.6-121.3s54-121.3 121.6-121.3S377.6 188.6 377.6 256 323.5 377.3 256 377.3zm0-215.6c-52.7 0-94.6 41.8-94.6 94.3s41.9 94.3 94.6 94.3 94.6-41.8 94.6-94.3-41.9-94.3-94.6-94.3zM293.2 512h-72.9L200 450c-13.5-4-27-9.4-39.2-16.2l-59.4 29.6L50 412.3 79.7 353c-6.8-12.1-12.2-25.6-16.2-39.1L0 292.4v-72.8l62.1-20.2c4.1-13.5 9.5-26.9 16.2-39.1L48.6 101 100 49.9l59.4 29.6c12.2-6.7 25.7-12.1 39.2-16.2L220.2 0h72.9l20.3 62c13.5 4 27 9.4 39.2 16.2L412 48.5l51.3 51.2-29.7 59.3c6.8 12.1 12.2 25.6 16.2 39.1l62.1 20.2V291l-62.1 20.2c-4.1 13.5-9.5 26.9-16.2 39.1l29.7 59.3-51.3 51.2-59.4-29.6c-12.2 6.7-25.7 12.1-39.2 16.2L293.2 512zm-54.1-26.9h35.1l18.9-57.9 6.8-1.3c16.2-4 31.1-10.8 45.9-18.9l6.8-4 54 26.9 24.3-24.3-27-53.9 4.1-6.7c8.1-13.5 14.9-29.6 18.9-45.8l1.4-6.7 58.1-18.9v-35l-58.1-18.9-1.4-6.7c-4.1-16.2-10.8-31-18.9-45.8l-4.1-6.7 27-53.9-24.3-24.3-54 26.9-6.8-4c-14.8-8.2-29.7-14.9-45.9-19l-6.8-1.3L274.2 27h-35.1l-18.9 57.9-6.8 1.3c-16.2 4-31.1 10.8-45.9 18.9l-6.8 4-54-26.9-24.3 24.3 27 53.9-4.1 6.7c-8.1 13.5-14.9 29.6-18.9 45.8l-1.4 6.7-58 18.9v35l58.1 18.9 1.4 6.7c4.1 16.2 10.8 31 18.9 45.8l4.1 6.7-27 53.9 24.3 24.3 54-26.9 6.8 4c14.9 8.1 29.7 14.8 45.9 18.9l6.8 1.3 18.8 58z"/>
+			</symbol>
+		</svg>
+		<!-- /fabricator icons -->
+		<!-- fabricator menu -->
+		<div class="f-menu">
+		
+			<div class="f-controls">
+				<div class="f-control f-global-control" data-f-toggle-control="labels" title="Toggle Labels">
+					<svg>
+						<use xlink:href="#f-icon-labels" />
+					</svg>
+				</div>
+				<div class="f-control f-global-control" data-f-toggle-control="notes" title="Toggle Notes">
+					<svg>
+						<use xlink:href="#f-icon-notes" />
+					</svg>
+				</div>
+				<div class="f-control f-global-control" data-f-toggle-control="code" title="Toggle Code">
+					<svg>
+						<use xlink:href="#f-icon-code" />
+					</svg>
+				</div>
+			</div>
+		
+			<ul>
+		
+				<li>
+					<a href="index.html" class="f-menu__heading">Overview</a>
+				</li>
+		
+				<li>
+					<a href="atoms.html" class="f-menu__heading">Atoms</a>
+					<ul>
+						<li>
+							<a href="atoms.html#button">Button</a>
+						</li>
+						<li>
+							<a href="atoms.html#buttons">Buttons</a>
+						</li>
+						<li>
+							<a href="atoms.html#logo">Logo</a>
+						</li>
+						<li>
+							<a href="atoms.html#table">Table</a>
+						</li>
+						<li>
+							<a href="atoms.html#text">Text</a>
+						</li>
+						<li>
+							<a href="atoms.html#watch">Watch</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="molecules.html" class="f-menu__heading">Molecules</a>
+					<ul>
+						<li>
+							<a href="molecules.html#checkbox">Checkbox</a>
+						</li>
+						<li>
+							<a href="molecules.html#links">Links</a>
+						</li>
+						<li>
+							<a href="molecules.html#ordered">Ordered</a>
+						</li>
+						<li>
+							<a href="molecules.html#paragraph">Paragraph</a>
+						</li>
+						<li>
+							<a href="molecules.html#radio">Radio</a>
+						</li>
+						<li>
+							<a href="molecules.html#select">Select</a>
+						</li>
+						<li>
+							<a href="molecules.html#text-input">Text Input</a>
+						</li>
+						<li>
+							<a href="molecules.html#textarea">Textarea</a>
+						</li>
+						<li>
+							<a href="molecules.html#unordered">Unordered</a>
+						</li>
+						<li>
+							<a href="molecules.html#video">Video</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="organisms.html" class="f-menu__heading">Organisms</a>
+					<ul>
+						<li>
+							<a href="organisms.html#about">About</a>
+						</li>
+						<li>
+							<a href="organisms.html#done">Done</a>
+						</li>
+						<li>
+							<a href="organisms.html#footer">Footer</a>
+						</li>
+						<li>
+							<a href="organisms.html#form">Form</a>
+						</li>
+						<li>
+							<a href="organisms.html#hero">Hero</a>
+						</li>
+						<li>
+							<a href="organisms.html#intro">Intro</a>
+						</li>
+						<li>
+							<a href="organisms.html#modern">Modern</a>
+						</li>
+						<li>
+							<a href="organisms.html#solution">Solution</a>
+						</li>
+						<li>
+							<a href="organisms.html#what">What</a>
+						</li>
+					</ul>
+				</li>
+		
+				<li>
+					<a href="pages.html" class="f-menu__heading">Pages</a>
+					<ul>
+						<li>
+							<a href="pages/home.html">Home</a>
+						</li>
+					</ul>
+				</li>
+		
+				<li>
+					<a href="docs.html" class="f-menu__heading">Docs</a>
+					<ul>
+						<li>
+							<a href="docs.html#javascript">Javascript</a>
+						</li>
+					</ul>
+				</li>
+		
+			</ul>
+		
+		
+		</div>
+		<!-- /fabricator menu -->
+		<div class="f-container">
+			<div class="f-control-bar">
+				<div class="f-control f-menu-toggle">
+					<svg>
+						<use xlink:href="#f-icon-menu" />
+					</svg>
+				</div>
+			</div>
+
+
+	
+<h1 data-f-toggle="labels">Organisms</h1>
+
+
+<div class="f-item-group" id="about">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">About</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div>
+<div class="f-item-preview">
+	<div class="about">
+	<div class="main-container  inner-about ">
+
+		<div class="inner-about_part-1">
+			<p class="text medium title">About</p>
+			<p class="text small">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt </p>
+		</div>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;about&quot;&gt;
+	&lt;div class&#x3D;&quot;main-container  inner-about &quot;&gt;
+
+		&lt;div class&#x3D;&quot;inner-about_part-1&quot;&gt;
+			&lt;p class&#x3D;&quot;text medium title&quot;&gt;About&lt;/p&gt;
+			&lt;p class&#x3D;&quot;text small&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt &lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="done">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Done</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div>
+<div class="f-item-preview">
+	<div class="done">
+	<div class="main-container  inner-done ">
+
+		<div class="inner-done_part-1">
+			<img src="../../assets/toolkit/images/done2.png" alt="">
+		</div>
+		<div class="inner-done_part-2">
+			<p class="text medium title">Get your things done,</p>
+			<p class="text medium ">everywhere</p>
+			<div class="hero-links">
+				<a href="">
+                    <img src="../../assets/toolkit/images/Image 1.png" alt="">
+                </a>
+				<a href="">
+                    <img src="../../assets/toolkit/images/playstore.png" alt="">
+                </a>
+			</div>
+		</div>
+
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;done&quot;&gt;
+	&lt;div class&#x3D;&quot;main-container  inner-done &quot;&gt;
+
+		&lt;div class&#x3D;&quot;inner-done_part-1&quot;&gt;
+			&lt;img src&#x3D;&quot;../../assets/toolkit/images/done2.png&quot; alt&#x3D;&quot;&quot;&gt;
+		&lt;/div&gt;
+		&lt;div class&#x3D;&quot;inner-done_part-2&quot;&gt;
+			&lt;p class&#x3D;&quot;text medium title&quot;&gt;Get your things done,&lt;/p&gt;
+			&lt;p class&#x3D;&quot;text medium &quot;&gt;everywhere&lt;/p&gt;
+			&lt;div class&#x3D;&quot;hero-links&quot;&gt;
+				&lt;a href&#x3D;&quot;&quot;&gt;
+                    &lt;img src&#x3D;&quot;../../assets/toolkit/images/Image 1.png&quot; alt&#x3D;&quot;&quot;&gt;
+                &lt;/a&gt;
+				&lt;a href&#x3D;&quot;&quot;&gt;
+                    &lt;img src&#x3D;&quot;../../assets/toolkit/images/playstore.png&quot; alt&#x3D;&quot;&quot;&gt;
+                &lt;/a&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="footer">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Footer</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div>
+<div class="f-item-preview">
+	<div class="footer">
+	<div class="footer-inner">
+		<!-- <img class="header-logo" src="../../assets/toolkit/images/mozaix-logo.svg" alt="logo"> -->
+		<span class="icon-mozaix-logo footer-logo"></span>
+		<p class="text footer-text">#madebymozaix</p>
+		<a href="#" title="Scroll to Top" class="ScrollTop top"></a>
+	</div>
+
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;footer&quot;&gt;
+	&lt;div class&#x3D;&quot;footer-inner&quot;&gt;
+		&lt;!-- &lt;img class&#x3D;&quot;header-logo&quot; src&#x3D;&quot;../../assets/toolkit/images/mozaix-logo.svg&quot; alt&#x3D;&quot;logo&quot;&gt; --&gt;
+		&lt;span class&#x3D;&quot;icon-mozaix-logo footer-logo&quot;&gt;&lt;/span&gt;
+		&lt;p class&#x3D;&quot;text footer-text&quot;&gt;#madebymozaix&lt;/p&gt;
+		&lt;a href&#x3D;&quot;#&quot; title&#x3D;&quot;Scroll to Top&quot; class&#x3D;&quot;ScrollTop top&quot;&gt;&lt;/a&gt;
+	&lt;/div&gt;
+
+&lt;/div&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="form">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Form</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div>
+<div class="f-item-preview">
+	<form action="">
+	<div>
+		<label for="textInput">Text input</label>
+		<input type="text" id="textInput" /> </div>
+	<button class="button">Submit</button>
+
+	<button class="button" type="button" data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Fancy word for a beetle." data-position="right" data-alignment="top">
+	  <span class="icon icon-cart"></span>Right Top
+	</button></form>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;form action&#x3D;&quot;&quot;&gt;
+	&lt;div&gt;
+		&lt;label for&#x3D;&quot;textInput&quot;&gt;Text input&lt;/label&gt;
+		&lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;textInput&quot; /&gt; &lt;/div&gt;
+	&lt;button class&#x3D;&quot;button&quot;&gt;Submit&lt;/button&gt;
+
+	&lt;button class&#x3D;&quot;button&quot; type&#x3D;&quot;button&quot; data-tooltip aria-haspopup&#x3D;&quot;true&quot; class&#x3D;&quot;has-tip&quot; data-disable-hover&#x3D;&quot;false&quot; tabindex&#x3D;&quot;1&quot; title&#x3D;&quot;Fancy word for a beetle.&quot; data-position&#x3D;&quot;right&quot; data-alignment&#x3D;&quot;top&quot;&gt;
+	  &lt;span class&#x3D;&quot;icon icon-cart&quot;&gt;&lt;/span&gt;Right Top
+	&lt;/button&gt;&lt;/form&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="hero">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Hero</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div>
+<div class="f-item-preview">
+	<div class="hero">
+	<div class="main-container  inner-hero ">
+
+		<div class="hero-header ">
+			<p class="text small title">Newolution</p>
+			<!-- <img class="header-logo" src="../../assets/toolkit/images/mozaix-logo.svg" alt="logo"> -->
+			<span class="icon-mozaix-logo "></span> </div>
+		<div class="hero-content">
+			<div class="hero-content_part-1">
+				<p class="text small">World of making</p>
+				<p class="text medium title">Focus on what matters</p>
+				<p class="text small">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed dolor</p>
+				<!-- <button class="button watch">Watch</button> -->
+				<a class="button watch" href="#intro">Watch</a> </div>
+			<div class="hero-content_part-2">
+				<!-- <img src="../../assets/toolkit/images/Screenshot_1.png" alt=""> -->
+				<!-- <img src="../../assets/toolkit/images/hero.png" alt=""> -->
+				<img src="../../assets/toolkit/images/Group 51 (1).png" alt="">
+			</div>
+		</div>
+
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;hero&quot;&gt;
+	&lt;div class&#x3D;&quot;main-container  inner-hero &quot;&gt;
+
+		&lt;div class&#x3D;&quot;hero-header &quot;&gt;
+			&lt;p class&#x3D;&quot;text small title&quot;&gt;Newolution&lt;/p&gt;
+			&lt;!-- &lt;img class&#x3D;&quot;header-logo&quot; src&#x3D;&quot;../../assets/toolkit/images/mozaix-logo.svg&quot; alt&#x3D;&quot;logo&quot;&gt; --&gt;
+			&lt;span class&#x3D;&quot;icon-mozaix-logo &quot;&gt;&lt;/span&gt; &lt;/div&gt;
+		&lt;div class&#x3D;&quot;hero-content&quot;&gt;
+			&lt;div class&#x3D;&quot;hero-content_part-1&quot;&gt;
+				&lt;p class&#x3D;&quot;text small&quot;&gt;World of making&lt;/p&gt;
+				&lt;p class&#x3D;&quot;text medium title&quot;&gt;Focus on what matters&lt;/p&gt;
+				&lt;p class&#x3D;&quot;text small&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed dolor&lt;/p&gt;
+				&lt;!-- &lt;button class&#x3D;&quot;button watch&quot;&gt;Watch&lt;/button&gt; --&gt;
+				&lt;a class&#x3D;&quot;button watch&quot; href&#x3D;&quot;#intro&quot;&gt;Watch&lt;/a&gt; &lt;/div&gt;
+			&lt;div class&#x3D;&quot;hero-content_part-2&quot;&gt;
+				&lt;!-- &lt;img src&#x3D;&quot;../../assets/toolkit/images/Screenshot_1.png&quot; alt&#x3D;&quot;&quot;&gt; --&gt;
+				&lt;!-- &lt;img src&#x3D;&quot;../../assets/toolkit/images/hero.png&quot; alt&#x3D;&quot;&quot;&gt; --&gt;
+				&lt;img src&#x3D;&quot;../../assets/toolkit/images/Group 51 (1).png&quot; alt&#x3D;&quot;&quot;&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="intro">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Intro</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div>
+<div class="f-item-preview">
+	<div class="intro">
+	<div class="main-container  inner-intro ">
+		<div class="intro-head">
+			<p class="text large title">Introduction</p>
+		</div>
+		<div id="intro" class="intro-body">
+			<video width="100%" controls>
+                <source src="movie.mp4" type="video/mp4">
+                <source src="movie.ogg" type="video/ogg">
+            </video>
+		</div>
+	</div>
+</div>
+
+<div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;intro&quot;&gt;
+	&lt;div class&#x3D;&quot;main-container  inner-intro &quot;&gt;
+		&lt;div class&#x3D;&quot;intro-head&quot;&gt;
+			&lt;p class&#x3D;&quot;text large title&quot;&gt;Introduction&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div id&#x3D;&quot;intro&quot; class&#x3D;&quot;intro-body&quot;&gt;
+			&lt;video width&#x3D;&quot;100%&quot; controls&gt;
+                &lt;source src&#x3D;&quot;movie.mp4&quot; type&#x3D;&quot;video/mp4&quot;&gt;
+                &lt;source src&#x3D;&quot;movie.ogg&quot; type&#x3D;&quot;video/ogg&quot;&gt;
+            &lt;/video&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="modern">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Modern</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div>
+<div class="f-item-preview">
+	<div class="modern">
+	<div class="main-container  inner-modern ">
+		<div class="inner-modern_part-1">
+			<p class="text small">Modern</p>
+			<p class="text medium">Simple</p>
+			<p class="text large">Elegant</p>
+		</div>
+		<div class="inner-modern_part-2">
+
+			<div class='circle'>
+				<div class="sun">
+					<img src="../../assets/toolkit/images/sunny.png" alt="">
+				</div>
+				<div class="moon">
+					<img src="../../assets/toolkit/images/moon.png" alt="">
+				</div>
+			</div>
+			<div class="dark-light">
+				<span class="light">
+                    <!-- <img class="night" src="../../assets/toolkit/images/dark2.png" alt=""> -->
+                    <img class="night" src="../../assets/toolkit/images/night.png" alt="">
+                    <!-- <img class="day active" src="../../assets/toolkit/images/Screen.png" alt=""> -->
+                    <img class="day active" src="../../assets/toolkit/images/day.png" alt="">
+                </span>
+			</div>
+
+		</div>
+		<div class="inner-modern_part-3">
+			<p class="text large">even in dark</p>
+		</div>
+
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;modern&quot;&gt;
+	&lt;div class&#x3D;&quot;main-container  inner-modern &quot;&gt;
+		&lt;div class&#x3D;&quot;inner-modern_part-1&quot;&gt;
+			&lt;p class&#x3D;&quot;text small&quot;&gt;Modern&lt;/p&gt;
+			&lt;p class&#x3D;&quot;text medium&quot;&gt;Simple&lt;/p&gt;
+			&lt;p class&#x3D;&quot;text large&quot;&gt;Elegant&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class&#x3D;&quot;inner-modern_part-2&quot;&gt;
+
+			&lt;div class&#x3D;&#x27;circle&#x27;&gt;
+				&lt;div class&#x3D;&quot;sun&quot;&gt;
+					&lt;img src&#x3D;&quot;../../assets/toolkit/images/sunny.png&quot; alt&#x3D;&quot;&quot;&gt;
+				&lt;/div&gt;
+				&lt;div class&#x3D;&quot;moon&quot;&gt;
+					&lt;img src&#x3D;&quot;../../assets/toolkit/images/moon.png&quot; alt&#x3D;&quot;&quot;&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class&#x3D;&quot;dark-light&quot;&gt;
+				&lt;span class&#x3D;&quot;light&quot;&gt;
+                    &lt;!-- &lt;img class&#x3D;&quot;night&quot; src&#x3D;&quot;../../assets/toolkit/images/dark2.png&quot; alt&#x3D;&quot;&quot;&gt; --&gt;
+                    &lt;img class&#x3D;&quot;night&quot; src&#x3D;&quot;../../assets/toolkit/images/night.png&quot; alt&#x3D;&quot;&quot;&gt;
+                    &lt;!-- &lt;img class&#x3D;&quot;day active&quot; src&#x3D;&quot;../../assets/toolkit/images/Screen.png&quot; alt&#x3D;&quot;&quot;&gt; --&gt;
+                    &lt;img class&#x3D;&quot;day active&quot; src&#x3D;&quot;../../assets/toolkit/images/day.png&quot; alt&#x3D;&quot;&quot;&gt;
+                &lt;/span&gt;
+			&lt;/div&gt;
+
+		&lt;/div&gt;
+		&lt;div class&#x3D;&quot;inner-modern_part-3&quot;&gt;
+			&lt;p class&#x3D;&quot;text large&quot;&gt;even in dark&lt;/p&gt;
+		&lt;/div&gt;
+
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="solution">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Solution</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div>
+<div class="f-item-preview">
+	<div class="solution">
+	<div class="main-container  inner-solution">
+
+		<div class="inner-solution_part-1">
+
+			<div class="test">
+				<!-- <img  src="../../assets/toolkit/images/Screenshot_2.png" alt=""> -->
+				<img src="../../assets/toolkit/images/Group 46.png" alt="">
+				<!-- <img  src="../../assets/toolkit/images/solution.png" alt=""> -->
+
+			</div>
+
+
+		</div>
+		<div class="inner-solution_part-2">
+			<p class="text medium title">Solution</p>
+			<p class="text small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, sunt?</p>
+		</div>
+
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;solution&quot;&gt;
+	&lt;div class&#x3D;&quot;main-container  inner-solution&quot;&gt;
+
+		&lt;div class&#x3D;&quot;inner-solution_part-1&quot;&gt;
+
+			&lt;div class&#x3D;&quot;test&quot;&gt;
+				&lt;!-- &lt;img  src&#x3D;&quot;../../assets/toolkit/images/Screenshot_2.png&quot; alt&#x3D;&quot;&quot;&gt; --&gt;
+				&lt;img src&#x3D;&quot;../../assets/toolkit/images/Group 46.png&quot; alt&#x3D;&quot;&quot;&gt;
+				&lt;!-- &lt;img  src&#x3D;&quot;../../assets/toolkit/images/solution.png&quot; alt&#x3D;&quot;&quot;&gt; --&gt;
+
+			&lt;/div&gt;
+
+
+		&lt;/div&gt;
+		&lt;div class&#x3D;&quot;inner-solution_part-2&quot;&gt;
+			&lt;p class&#x3D;&quot;text medium title&quot;&gt;Solution&lt;/p&gt;
+			&lt;p class&#x3D;&quot;text small&quot;&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, sunt?&lt;/p&gt;
+		&lt;/div&gt;
+
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="what">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">What</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div>
+<div class="f-item-preview">
+	<div class="what">
+	<div class="main-container inner-what">
+		<div class="inner-what_part-1">
+			<p class="text large title">What can you do?</p>
+		</div>
+		<div class="inner-what_part-1">
+			<video width="100%" controls>
+                <source src="movie.mp4" type="video/mp4">
+                <source src="movie.ogg" type="video/ogg">
+            </video> </div>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;what&quot;&gt;
+	&lt;div class&#x3D;&quot;main-container inner-what&quot;&gt;
+		&lt;div class&#x3D;&quot;inner-what_part-1&quot;&gt;
+			&lt;p class&#x3D;&quot;text large title&quot;&gt;What can you do?&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class&#x3D;&quot;inner-what_part-1&quot;&gt;
+			&lt;video width&#x3D;&quot;100%&quot; controls&gt;
+                &lt;source src&#x3D;&quot;movie.mp4&quot; type&#x3D;&quot;video/mp4&quot;&gt;
+                &lt;source src&#x3D;&quot;movie.ogg&quot; type&#x3D;&quot;video/ogg&quot;&gt;
+            &lt;/video&gt; &lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+	
+	<script src="/assets/toolkit/scripts/jquery.min.js"></script>
+
+		</div>
+	<script src="/assets/fabricator/scripts/f.js"></script>
+
+	<!-- toolkit scripts -->
+	<script src="/assets/toolkit/scripts/toolkit.js"></script>
+	<!-- /toolkit scripts -->
+
+</body>
+</html>
