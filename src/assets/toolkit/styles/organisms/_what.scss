@@ -1,0 +1,15 @@
+.what {
+    width: 100vw;
+    background-color: #292934;
+    position: relative;
+}
+
+.inner-what {
+    display: flex;
+    flex-direction: column !important;
+    @include flex-grid-column();    
+    padding: 0 15px;
+}
+.inner-what_part-1 {
+    text-align: center;
+}

@@ -1,0 +1,11 @@
+.icon-mozaix-logo:before {
+    content: "\e900";
+    color: white;
+    font-size: 50px;
+  }
+      .footer-logo {
+        &::before {
+          
+          color: #868686;
+        }
+      }

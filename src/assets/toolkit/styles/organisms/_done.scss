@@ -1,0 +1,33 @@
+.done {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #292934;
+    position: relative;
+}
+
+.inner-done {
+    display: flex;
+    height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+    @include flex-grid-column();
+
+    @include breakpoint(medium down) {
+        display: flex;       
+        flex-direction: column !important;
+        justify-content: unset;
+    }
+}
+
+.inner-done_part-1 {
+    @include flex-grid-column();
+    max-height: fit-content;
+    margin-bottom: 50px;
+
+    img {
+        max-width: 90%;
+    }
+}
+.inner-done_part-2 {
+
+} 

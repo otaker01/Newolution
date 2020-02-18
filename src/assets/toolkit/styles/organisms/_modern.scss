@@ -1,0 +1,124 @@
+.modern {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #292934;
+    position: relative;
+}
+
+.inner-modern {
+    @include flex-grid-row();
+    // display: flex;
+    // justify-content: space-between;
+    padding: 0 15px;
+    @include breakpoint(medium down) {
+      display: flex;       
+      flex-direction: column !important;
+      padding-bottom: 50px;
+  }
+}
+
+.inner-modern_part-1 {
+    @include flex-grid-column();
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include breakpoint(medium down) {
+        text-align: center;       
+    }
+}
+.inner-modern_part-3 {
+    @include flex-grid-column();
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include breakpoint(medium down) {
+      text-align: center;       
+  }
+}
+
+
+.inner-modern_part-2 {
+    @include flex-grid-column();
+    // background-color: #0000ff7b;    
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    position: relative;
+    padding-top: 50px;
+    min-height: 740px;
+}
+
+.circle {
+    width: 230px;
+    height: 230px;
+    border: 1px solid rgba(193, 193, 193, 0.408);
+    position: relative;
+    border-radius: 50%;
+    transition: 0.5s;
+    z-index: 10;
+    min-width: 230px;
+    
+  }
+  
+  .sun {
+    width: 50px;
+    height: 50px;
+    // border: 5px solid red;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -50%);
+    img {
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
+
+    }
+  }
+  .moon {
+    width: 50px;
+    height: 50px;
+    // border: 5px solid blue;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+
+    img {
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
+        transform: rotate(180deg);
+    }
+  }
+  .rotate  {
+    transform: rotate(180deg);
+    transition: 0.5s;
+  }   
+
+  .dark-light {
+    position: absolute;
+    /* background-color: red; */
+    height: 500px;
+    bottom: 90px;
+    /* width: 250px; */
+    z-index: 20;
+  }
+  .light {
+    height: 100%;
+    z-index: 100;
+      img {
+        height: 100%;
+
+        &.active {
+            display: initial;
+        }
+      }
+  }
+
+  .night, .day {
+    display: none;
+  }
+  

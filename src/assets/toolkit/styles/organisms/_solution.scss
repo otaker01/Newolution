@@ -1,0 +1,95 @@
+.solution {
+    width: 100vw;
+    height: 100vh;
+    background-color: #292934;
+    // background-color: #292934e7;
+    position: relative;
+    display: flex;
+    // display: none;
+}
+
+.inner-solution {
+    display: flex;
+    width: 100%;
+    // flex-direction: column !important;
+    // align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    align-items: center;
+    @include breakpoint(medium down) {
+        flex-direction: column !important;       
+        .inner-solution_part-1 {
+            .test {
+                transform: translateX(-500px);
+            }
+        }
+        .inner-solution_part-2 {
+            padding: 0 15px;
+            margin: 20px 0;
+            margin-top: 70px;
+            width: 100%;
+        }
+    }
+    
+    // &::before {
+    //     content: "";
+    //     position: absolute;
+    //     font-family: Poppins;
+    //     font-size: 413px;
+    //     line-height: 413px;
+    //     font-weight: bold;
+    //     top: 50%;
+    //     left: 50%;
+    //     transform: translate(-50%, -50%);
+    //     z-index: 2;
+    //     opacity: 0.57;
+    //     text-shadow: 0 3px 99px rgba(0, 0, 0, 0.25);
+    //     color: #2d2d38;
+
+    // }
+}
+
+.inner-solution_part-1 {
+    width: 45%;
+    position: relative;
+    // background-color: darkblue;
+}
+.test {
+    width: 700px;
+    background-color: #7a80d1;
+    border-radius: 14px;
+    -webkit-transform: translateX(-300px);
+    transform: translateX(-300px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    padding-right: 15px;
+    height: 440px;
+    position: relative;
+    &::before {
+        content: "Solution";
+        position: absolute;
+        text-shadow: 0 3px 99px rgba(0, 0, 0, 0.04);
+        font-size: 163px;
+        font-weight: bold;
+        text-align: left;
+        color: #6f75c9;
+        user-select: none;
+    }
+    img {
+        position: absolute;
+        right: -141px;
+        top: 73px;
+        height: 115%;
+    }
+}
+.inner-solution_part-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 45%;
+    // background-color: crimson;
+}

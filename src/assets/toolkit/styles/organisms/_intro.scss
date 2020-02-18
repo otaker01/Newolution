@@ -1,0 +1,53 @@
+.intro {
+    width: 100vw;
+    // min-height: 100vh;
+    background-color: #292934;
+    position: relative;
+}
+
+.inner-intro {
+    display: flex;
+    flex-direction: column !important;
+    @include flex-grid-column();
+
+}
+
+.intro-head {
+    padding: 0 15px;
+    text-align: center;
+}
+.intro-back {
+    font-family: Poppins;
+    text-shadow: 0 3px 99px rgba(0, 0, 0, 0.17);
+    font-size: 12vw;
+    line-height: 12vw;
+    font-weight: bold;
+    color: #292934;
+    position: relative;
+    &::after {
+        content: "Introduction";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 81px;
+        user-select: none;
+        color: white;
+        user-select: none;
+
+    }
+}
+
+.intro-body {
+    margin:  30px 0;
+    padding: 0 15px;
+    @include breakpoint(large up) {
+            
+    }
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    video {
+        outline: none;
+    }
+}

@@ -1,0 +1,16 @@
+
+.main-container {
+    @include grid-row();   
+    // max-width: 85rem;
+    flex-flow: unset;
+}
+
+
+* {
+    font-family: Poppins;
+    user-select: none;
+
+}
+body {
+    overflow-x: hidden;
+}

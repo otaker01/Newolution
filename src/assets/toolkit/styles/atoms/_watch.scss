@@ -1,0 +1,25 @@
+.watch {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;       
+
+    background: none;
+    border: 1px solid white;
+    border-radius: 50px;
+    width: 220px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 30px;
+    outline: none;
+    @include breakpoint(medium down) {
+        width: 170px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    &:hover {
+        background-color: white;
+        color: #000;
+        transition: ease all 0.5s;
+        
+    }
+}

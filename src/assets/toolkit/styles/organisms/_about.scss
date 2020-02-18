@@ -1,0 +1,41 @@
+.about {
+    width: 100vw;
+    height: 90vh;
+    background-color: #292934;
+    position: relative;
+    display: flex;
+}
+
+.inner-about {
+    display: flex;
+    // flex-direction: column !important;
+    align-items: center;
+
+    padding: 0 15px;
+    
+    &::before {
+        content: "About" !important;
+        position: absolute;
+        font-family: Poppins;
+        font-size: 25vw;
+        line-height: 413px;
+        font-weight: bold;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        opacity: 0.57;
+        text-shadow: 0 3px 99px rgba(0, 0, 0, 0.25);
+        color: #2d2d38;
+        user-select: none;
+
+    }
+}
+
+.inner-about_part-1 {
+    width: 50%;
+    z-index: 222;
+    @include breakpoint(medium down) {
+     width: 100%;       
+    }
+}

@@ -1,0 +1,42 @@
+.text {
+    color: white;
+    margin: 0;
+    padding: 0;
+    padding: 5px 0px;
+    z-index: 30;
+    &.small {
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 41px;
+        @include breakpoint(medium down) {
+            font-size: 20px;
+            line-height: 24px !important;
+            
+        }
+    }
+    &.medium {
+        @include breakpoint(medium down) {
+            font-size: 30px;   
+            line-height: 30px;   
+
+        }
+        font-size: 50px;
+        line-height: 63px;
+    }
+    &.large {
+        font-size: 80px;
+        // line-height: 95px;
+        @include breakpoint(medium down) {
+         font-size: 55px;   
+        }
+    }
+    &.title {
+        text-shadow: 0 3px 99px rgba(0, 0, 0, 0.05);
+        font-weight: bold;
+    }
+    &.footer-text {
+        font-family: Poppins;
+        font-size: 27px;
+        color: #868686;
+    }
+}
