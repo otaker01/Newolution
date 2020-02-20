@@ -14,10 +14,10 @@
     // flex-direction: column !important;
     // align-items: center;
     justify-content: space-between;
-    overflow: hidden;
     align-items: center;
     @include breakpoint(medium down) {
         flex-direction: column !important;       
+        overflow: hidden;
         .inner-solution_part-1 {
             .test {
                 transform: translateX(-500px);

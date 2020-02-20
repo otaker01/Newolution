@@ -92,6 +92,11 @@
 .hero-links {
     // display: flex;
     margin-top: 20px;
+    @include breakpoint(medium down) {
+        a {
+            margin-bottom: 20px;
+        }       
+    }
     a {
         height: auto;
         width: auto;
