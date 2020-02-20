@@ -15,6 +15,16 @@
 .intro-head {
     padding: 0 15px;
     text-align: center;
+    position: relative;
+    @include breakpoint(medium down) {
+        .intro-bg-text {
+            width: 100%;
+            opacity: 0;
+            font-size: 10px;
+        }
+    }
+
+
 }
 .intro-back {
     font-family: Poppins;
@@ -44,7 +54,7 @@
     @include breakpoint(large up) {
             
     }
-    height: 100vh;
+    // height: 100vh;
     display: flex;
     align-items: center;
     video {

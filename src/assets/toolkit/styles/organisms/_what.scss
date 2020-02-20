@@ -12,4 +12,11 @@
 }
 .inner-what_part-1 {
     text-align: center;
+    @include breakpoint(medium down) {
+        .large {
+            font-size: 35px;
+        }
+    }
 }
+
+

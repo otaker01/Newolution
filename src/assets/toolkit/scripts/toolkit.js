@@ -71,12 +71,12 @@ $(document).ready(function (){
 });
 
 var targetOffset = $("#modern").offset().top;
-console.log(targetOffset);
+// console.log(targetOffset);
 
 
 var $w = $(window).scroll(function(){
 	var tt = $w.scrollTop();
-	console.log(tt);
+	// console.log(tt);
     if ( $w.scrollTop() > targetOffset ) { 
 			$(".circle").addClass("rotate");
 			$(".day").removeClass("active");
@@ -88,38 +88,3 @@ var $w = $(window).scroll(function(){
 			$(".night").removeClass("active");
 		    }
 		 });
-
-// var targetOffset = $("#modern").offset().top;
-// let Rotate = false;
-// console.log(Rotate)
-// var $w = $(window).scroll(function(){
-//     if ( $w.scrollTop() > targetOffset ) {   
-// 		Rotate = true;
-// 		// $("#modern").css('background-color', "red")
-// 		console.log(Rotate)
-
-// 		// return Rotate;
-//     } else {
-// 		// ...
-// 	}
-	
-// 	return Rotate;
-// });
-// console.log(Rotate)
-
-
-// var $w = $(window).scroll(function(){
-// 	if ( $w.scrollTop() > targetOffset ) { 
-// 		rotate = true;
-// 	} else {
-		
-// 	}
-// });
-
-
-
-// if (Rotate == true) {
-// 	$(".circle").toggleClass("rotate");
-// 	$(".day").toggleClass("active");
-// 	$(".night").toggleClass("active");  
-// }
