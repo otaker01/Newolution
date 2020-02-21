@@ -4,6 +4,10 @@
     background-color: #292934;
     position: relative;
     display: flex;
+    @include breakpoint(medium down) {
+        height: auto;
+        padding: 100px 15px;
+    }
 }
 
 .inner-about {

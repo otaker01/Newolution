@@ -93,9 +93,11 @@
     // display: flex;
     margin-top: 20px;
     @include breakpoint(medium down) {
-        a {
-            margin-bottom: 20px;
-        }       
+        height: 160px;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;     
     }
     a {
         height: auto;

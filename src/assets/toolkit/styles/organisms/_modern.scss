@@ -44,7 +44,7 @@
     // background-color: #0000ff7b;    
     display: flex;
     justify-content: center;
-    // align-items: center;
+    align-items: center;
     position: relative;
     padding-top: 50px;
     min-height: 740px;
@@ -61,7 +61,11 @@
     transition: 0.5s;
     z-index: 10;
     min-width: 230px;
-    
+    position: absolute;
+    transform: translateY(-50%);
+  }
+  .circle-p {
+    // transform: translateY(-50%);
   }
   
   .sun {
@@ -96,15 +100,15 @@
     }
   }
   .rotate  {
-    transform: rotate(-180deg);
+    transform:  translateY(-50%) rotate(-180deg);
     transition: 0.5s;
   }   
 
   .dark-light {
-    position: absolute;
+    position: relative;
     /* background-color: red; */
     height: 500px;
-    bottom: 130px;
+    // bottom: 130px;
     /* width: 250px; */
     z-index: 20;
   }
@@ -125,6 +129,7 @@
   .night, .day {
     display: none;
     width: 223px;
-height: 465px !important;
+    height: 465px !important;
+    z-index: 10000;
   }
   
