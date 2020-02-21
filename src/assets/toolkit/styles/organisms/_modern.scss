@@ -3,6 +3,10 @@
     min-height: 100vh;
     background-color: #292934;
     position: relative;
+    @include breakpoint (medium down) {
+      margin-top: 50px;
+      background-color: red;
+    }
 }
 
 .inner-modern {
