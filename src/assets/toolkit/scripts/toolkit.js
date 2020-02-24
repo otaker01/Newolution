@@ -88,3 +88,4 @@ var $w = $(window).scroll(function(){
 			$(".night").removeClass("active");
 		    }
 		 });
+
