@@ -4,7 +4,7 @@
     background-color: #292934;
     position: relative;
     @include breakpoint (medium down) {
-      // margin-top: 50px;
+      margin-top: 50px;
       
     }
 }
@@ -55,6 +55,7 @@
     min-height: 740px;
     @include breakpoint(medium down) {
       margin-top: 20px;
+
   }
 
 }
