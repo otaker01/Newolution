@@ -53,6 +53,10 @@
     position: relative;
     padding-top: 50px;
     min-height: 740px;
+    @include breakpoint(medium down) {
+      margin-top: 20px;
+  }
+
 }
 
 .circle {
