@@ -55,6 +55,7 @@
     min-height: 740px;
     @include breakpoint(medium down) {
       margin-top: 20px;
+      transform: translateY(50%);
   }
 
 }
