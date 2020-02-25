@@ -70,7 +70,7 @@ $(document).ready(function (){
 	});
 });
 
-var targetOffset = $("#modern").offset().top;
+var targetOffset = $(".modern222").offset().top;
 // console.log(targetOffset);
 
 
